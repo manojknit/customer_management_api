@@ -10,7 +10,7 @@ Crete git Repo
 git clone git@github-manojknit:manojknit/customer_management_api.git
 # Modify Project and commit
 git add .
-git commit -m "first commit"
+git commit -m "first test run"
 git push -u origin main
 ```
 
@@ -25,3 +25,5 @@ Flask==3.0.3
 pip3 install -r requirements.txt
 python3 routes.py
 ```
+Verify
+http://127.0.0.1:5000
