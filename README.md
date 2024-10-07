@@ -27,5 +27,4 @@ python3 routes.py
 ```
 ### Verify
 http://127.0.0.1:5000
-![image](./img/first-test-run.png)
-<img src="./img/first-test-run.png" width="250" height="250">
+<img src="./img/first-test-run.png" width="250" height="450">
