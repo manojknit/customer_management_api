@@ -25,5 +25,6 @@ Flask==3.0.3
 pip3 install -r requirements.txt
 python3 routes.py
 ```
-Verify
+### Verify
 http://127.0.0.1:5000
+![image](./img/first-test-run.png)
