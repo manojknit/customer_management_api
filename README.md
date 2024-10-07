@@ -28,3 +28,6 @@ python3 routes.py
 ### Verify
 http://127.0.0.1:5000
 ![image](./img/first-test-run.png)
+### Verify
+http://127.0.0.1:5000
+![image](./img/first-test-run.png){:height="200px" width="300px"}
