@@ -60,7 +60,7 @@ http://127.0.0.1:5000
 
 # Prerequisites
 - Python 3.9 or higher installed.
-- PostgreSQL installed and running.
+- MySql/PostgreSQL installed and running using bitnami charts.
 - Docker installed.
 - Helm installed.
 - Kubernetes cluster minikube running.
@@ -71,8 +71,6 @@ http://127.0.0.1:5000
 helm search repo bitnami/postgresql --versions
 helm search repo bitnami/mysql --versions
 
-psql --host 127.0.0.1 -U user -d customerdb -p 5433
-
 minikube start
 minikube addons enable ingress
 eval $(minikube docker-env)
@@ -80,7 +78,7 @@ eval $(minikube docker-env)
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 
-
+# docker publish to local registry
 docker build -t customer-service:latest .
 # Assuming a local registry is running at localhost:5000. if not do following
 # $ docker pull registry
