@@ -5,6 +5,8 @@ This RESTful web service operates on customer data.
 
 ## Code Base
 ### Project Structure
+project structure will look like this:
+```
 customer_api/
 │
 ├── customer_api/
@@ -22,6 +24,8 @@ customer_api/
         └── templates/
             ├── deployment.yaml
             └── service.yaml
+```
+
 
 ### Git set up
 Crete git Repo
