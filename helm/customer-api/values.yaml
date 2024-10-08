@@ -1,0 +1,26 @@
+global:
+  mysql:
+    mysqlRootPassword: rootpassword  # Set root password for MySQL
+    mysqlUser: user                   # Define your database user
+    mysqlPassword: userpassword       # Set the password for the user
+    mysqlDatabase: customerdb         # Set the database name
+    mysqlUserHost: '%'
+
+service:
+  type: ClusterIP
+  port: 7000  # Keep this as is for your application
+
+image:
+  repository: localhost:5001/customer-service
+  tag: latest
+
+mysql:
+  initdbScripts:
+    init.sql: |
+      CREATE DATABASE IF NOT EXISTS customerdb;
+      CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'userpassword';
+  enabled: true  # Ensure MySQL is enabled
+  configuration: |  # Adding MySQL configuration
+    [mysqld]
+    pid-file = /opt/bitnami/mysql/tmp/mysql.pid  # Use a secure directory if needed
+
